@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DFA Card - Démo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>DFA Card - Démo Joueur vs Joueur</h1>
+
+  <div id="game">
+    <div id="player1" class="player-zone">
+      <h2>Joueur 1</h2>
+      <div class="hand" id="hand1"></div>
+      <div class="field" id="field1"></div>
+    </div>
+
+    <div id="player2" class="player-zone">
+      <h2>Joueur 2</h2>
+      <div class="hand" id="hand2"></div>
+      <div class="field" id="field2"></div>
+    </div>
+
+    <div id="controls">
+      <button onclick="endTurn()">Fin de tour</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
