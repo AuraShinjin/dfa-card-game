@@ -11,7 +11,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* recentrage vertical */
       height: 100vh;
       margin: 0;
       padding: 20px;
@@ -26,7 +26,7 @@
     .board {
       display: flex;
       flex-direction: column;
-      gap: 80px;
+      gap: 60px; /* rapproché verticalement */
     }
 
     .player-board {
@@ -37,13 +37,13 @@
 
     .columns {
       display: flex;
-      gap: 20px;
+      gap: 15px; /* rapproché horizontalement */
     }
 
     .column {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px; /* léger resserrage vertical */
       background-color: #222;
       padding: 10px;
       border-radius: 10px;
@@ -51,8 +51,8 @@
     }
 
     .slot {
-      width: 100px;
-      height: 140px;
+      width: 110px;  /* légèrement plus grand */
+      height: 155px; /* légèrement plus grand */
       background-color: #444;
       border: 2px dashed #666;
       border-radius: 8px;
