@@ -1,73 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Plateau DFA Card</title>
   <style>
     body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     .board {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      gap: 80px;
+    }
+
+    .player-board {
+      display: flex;
+      flex-direction: column;
       gap: 10px;
+      align-items: center;
+    }
+
+    .columns {
+      display: flex;
+      gap: 30px;
     }
 
     .column {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
-    .cell {
+    .slot {
       width: 100px;
       height: 140px;
-      background-color: white;
-      border: 2px solid #999;
+      background-color: #444;
+      border: 2px dashed #666;
       border-radius: 8px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+
+    .title {
+      margin-bottom: 10px;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="board">
-    <div class="column">
-      <div class="cell">A1</div>
-      <div class="cell">B1</div>
-      <div class="cell">C1</div>
-      <div class="cell">D1</div>
-      <div class="cell">E1</div>
+    <div class="player-board">
+      <div class="title">Joueur 1</div>
+      <div class="columns">
+        <div class="column" id="player1-column1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="column" id="player1-column2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+      </div>
     </div>
-    <div class="column">
-      <div class="cell">A2</div>
-      <div class="cell">B2</div>
-      <div class="cell">C2</div>
-      <div class="cell">D2</div>
-      <div class="cell">E2</div>
-    </div>
-    <div class="column">
-      <div class="cell">A3</div>
-      <div class="cell">B3</div>
-      <div class="cell">C3</div>
-      <div class="cell">D3</div>
-      <div class="cell">E3</div>
-    </div>
-    <div class="column">
-      <div class="cell">A4</div>
-      <div class="cell">B4</div>
-      <div class="cell">C4</div>
-      <div class="cell">D4</div>
-      <div class="cell">E4</div>
+
+    <div class="player-board">
+      <div class="title">Joueur 2</div>
+      <div class="columns">
+        <div class="column" id="player2-column1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="column" id="player2-column2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
