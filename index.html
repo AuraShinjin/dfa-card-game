@@ -9,41 +9,43 @@
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: center; /* recentrage vertical */
       height: 100vh;
       margin: 0;
-      padding: 20px;
-    }
-
-    .player-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
     }
 
     .board {
       display: flex;
       flex-direction: column;
-      gap: 8px; /* rapproché verticalement */
+      gap: 80px;
+      align-items: center;
     }
 
     .player-board {
       display: flex;
       flex-direction: column;
       align-items: center;
+      transform: translateX(var(--offset));
+    }
+
+    .player1 {
+      --offset: -60px; /* Décalage vers la gauche */
+    }
+
+    .player2 {
+      --offset: 60px;  /* Décalage vers la droite */
     }
 
     .columns {
       display: flex;
-      gap: 15px; /* rapproché horizontalement */
+      gap: 15px;
     }
 
     .column {
       display: flex;
       flex-direction: column;
-      gap: 60px; /* léger resserrage vertical */
+      gap: 10px;
       background-color: #222;
       padding: 10px;
       border-radius: 10px;
@@ -51,69 +53,43 @@
     }
 
     .slot {
-      width: 110px;  /* légèrement plus grand */
-      height: 155px; /* légèrement plus grand */
+      width: 110px;
+      height: 140px;
       background-color: #444;
       border: 2px dashed #666;
       border-radius: 8px;
     }
+
+    .title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
+  <div class="board">
+    <div class="player-board player1">
+      <div class="title">Joueur 1</div>
+      <div class="columns">
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      </div>
+    </div>
 
-  <!-- Joueur 2 en haut -->
-  <div class="player-board">
-    <div class="player-title">Joueur 2</div>
-    <div class="columns">
-      <div class="column" id="player2-col1">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player2-col2">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player2-col3">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player2-col4">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player2-col5">
-        <div class="slot"></div>
-        <div class="slot"></div>
+    <div class="player-board player2">
+      <div class="title">Joueur 2</div>
+      <div class="columns">
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
+        <div class="column"><div class="slot"></div><div class="slot"></div></div>
       </div>
     </div>
   </div>
-
-  <!-- Joueur 1 en bas -->
-  <div class="player-board">
-    <div class="player-title">Joueur 1</div>
-    <div class="columns">
-      <div class="column" id="player1-col1">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player1-col2">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player1-col3">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player1-col4">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-      <div class="column" id="player1-col5">
-        <div class="slot"></div>
-        <div class="slot"></div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
