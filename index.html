@@ -1,32 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DFA Card - Démo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Plateau DFA Card</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .board {
+      display: flex;
+      gap: 80px;
+    }
+
+    .player-board {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .columns {
+      display: flex;
+      gap: 30px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .slot {
+      width: 100px;
+      height: 140px;
+      background-color: #444;
+      border: 2px dashed #666;
+      border-radius: 8px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>DFA Card - Démo Joueur vs Joueur</h1>
-
-  <div id="game">
-    <div id="player1" class="player-zone">
-      <h2>Joueur 1</h2>
-      <div class="hand" id="hand1"></div>
-      <div class="field" id="field1"></div>
+  <div class="board">
+    <div class="player-board">
+      <div class="title">Joueur 1</div>
+      <div class="columns">
+        <div class="column" id="player1-column1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="column" id="player1-column2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+      </div>
     </div>
 
-    <div id="player2" class="player-zone">
-      <h2>Joueur 2</h2>
-      <div class="hand" id="hand2"></div>
-      <div class="field" id="field2"></div>
-    </div>
-
-    <div id="controls">
-      <button onclick="endTurn()">Fin de tour</button>
+    <div class="player-board">
+      <div class="title">Joueur 2</div>
+      <div class="columns">
+        <div class="column" id="player2-column1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="column" id="player2-column2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
