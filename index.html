@@ -9,27 +9,13 @@
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .board {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      gap: 100px;
-    }
-
-    .player-board {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 120px; /* Ajoute un espace intérieur aux extrémités */
+      height: 100vh;
+      margin: 0;
+      padding: 60px 0; /* Marge pour éviter les bords haut/bas */
+      box-sizing: border-box;
     }
 
     .player {
@@ -41,6 +27,7 @@
     .columns {
       display: flex;
       gap: 15px;
+      margin-top: 10px;
     }
 
     .column {
@@ -62,38 +49,44 @@
     }
 
     .title {
-      margin-bottom: 10px;
       font-weight: bold;
       font-size: 18px;
+    }
+
+    .spacer {
+      height: 80px; /* Espace entre les deux joueurs, pour éviter le centre */
     }
   </style>
 </head>
 <body>
-  <div class="board">
-    <div class="player-board">
-      <div class="player">
-        <div class="title">Joueur 2</div>
-        <div class="columns">
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-        </div>
-      </div>
 
-      <div class="player">
-        <div class="title">Joueur 1</div>
-        <div class="columns">
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-          <div class="column"><div class="slot"></div><div class="slot"></div></div>
-        </div>
-      </div>
+  <!-- Joueur du haut -->
+  <div class="player">
+    <div class="title">Joueur 2</div>
+    <div class="columns">
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
     </div>
   </div>
+
+  <!-- Espace vide au milieu -->
+  <div class="spacer"></div>
+
+  <!-- Joueur du bas -->
+  <div class="player">
+    <div class="title">Joueur 1</div>
+    <div class="columns">
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+    </div>
+  </div>
+
 </body>
 </html>
 
