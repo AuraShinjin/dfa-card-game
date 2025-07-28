@@ -9,27 +9,35 @@
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       height: 100vh;
       margin: 0;
+      padding: 20px;
+    }
+
+    .player-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .board {
       display: flex;
-      gap: 100px;
+      flex-direction: column;
+      gap: 80px;
     }
 
     .player-board {
       display: flex;
       flex-direction: column;
-      gap: 10px;
       align-items: center;
     }
 
     .columns {
       display: flex;
-      gap: 30px;
+      gap: 20px;
     }
 
     .column {
@@ -49,56 +57,63 @@
       border: 2px dashed #666;
       border-radius: 8px;
     }
-
-    .title {
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
-  <div class="board">
-    <!-- Joueur 1 -->
-    <div class="player-board">
-      <div class="title">Joueur 1</div>
-      <div class="columns">
-        <div class="column" id="player1-column1">
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-        </div>
-        <div class="column" id="player1-column2">
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Joueur 2 -->
-    <div class="player-board">
-      <div class="title">Joueur 2</div>
-      <div class="columns">
-        <div class="column" id="player2-column1">
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-        </div>
-        <div class="column" id="player2-column2">
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-          <div class="slot"></div>
-        </div>
+  <!-- Joueur 2 en haut -->
+  <div class="player-board">
+    <div class="player-title">Joueur 2</div>
+    <div class="columns">
+      <div class="column" id="player2-col1">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player2-col2">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player2-col3">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player2-col4">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player2-col5">
+        <div class="slot"></div>
+        <div class="slot"></div>
       </div>
     </div>
   </div>
+
+  <!-- Joueur 1 en bas -->
+  <div class="player-board">
+    <div class="player-title">Joueur 1</div>
+    <div class="columns">
+      <div class="column" id="player1-col1">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player1-col2">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player1-col3">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player1-col4">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="column" id="player1-col5">
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
