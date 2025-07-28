@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Plateau DFA Card</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cell {
+      width: 100px;
+      height: 140px;
+      background-color: white;
+      border: 2px solid #999;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="column">
+      <div class="cell">A1</div>
+      <div class="cell">B1</div>
+      <div class="cell">C1</div>
+      <div class="cell">D1</div>
+      <div class="cell">E1</div>
+    </div>
+    <div class="column">
+      <div class="cell">A2</div>
+      <div class="cell">B2</div>
+      <div class="cell">C2</div>
+      <div class="cell">D2</div>
+      <div class="cell">E2</div>
+    </div>
+    <div class="column">
+      <div class="cell">A3</div>
+      <div class="cell">B3</div>
+      <div class="cell">C3</div>
+      <div class="cell">D3</div>
+      <div class="cell">E3</div>
+    </div>
+    <div class="column">
+      <div class="cell">A4</div>
+      <div class="cell">B4</div>
+      <div class="cell">C4</div>
+      <div class="cell">D4</div>
+      <div class="cell">E4</div>
+    </div>
+  </div>
+</body>
+</html>
