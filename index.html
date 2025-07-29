@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Plateau DFA Card</title>
   <style>
     body {
+      background-color: #111;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: #f5f5f5;
-      font-family: sans-serif;
+      padding: 275px 0; /* Marge pour éviter les bords haut/bas */
+      box-sizing: border-box;
     }
 
-    .plateau {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      max-width: 1000px;
-    }
-
-    .joueur {
+    .player {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 45%;
-      padding: 20px; /* contrôle la distance par rapport aux bords */
     }
 
-    .nom-joueur {
-      margin-bottom: 10px;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-
-    .grille {
-      display: grid;
-      grid-template-columns: repeat(5, 60px);
-      grid-template-rows: repeat(2, 80px);
-      gap: 5px;
-    }
-
-    .case {
-      width: 60px;
-      height: 80px;
-      border: 1px solid #aaa;
-      background-color: white;
+    .columns {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
     }
 
-    /* Couleur personnalisée pour les 5 cases du haut du Joueur 1 */
-    .joueur1 .case:nth-child(-n+5) {
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .slot {
+      width: 110px;
+      height: 140px;
+      background-color: #444;
+      border: 2px dashed #666;
+      border-radius: 8px;
+    }
+
+    /* 🎨 Ajout : coloration des 5 cases du haut du Joueur 1 */
+    .player:last-of-type .column .slot:first-child {
       background-color: #d68994;
     }
 
-    /* Couleur personnalisée pour les 5 cases du bas du Joueur 2 */
-    .joueur2 .case:nth-child(n+6) {
+    /* 🎨 Ajout : coloration des 5 cases du bas du Joueur 2 */
+    .player:first-of-type .column .slot:last-child {
       background-color: #d68994;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .spacer {
+      height: 80px; /* Espace entre les deux joueurs, pour éviter le centre */
     }
   </style>
 </head>
 <body>
-  <div class="plateau">
-    <!-- Joueur 1 (en haut) -->
-    <div class="joueur joueur1">
-      <div class="nom-joueur">Joueur 1</div>
-      <div class="grille">
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-      </div>
-    </div>
 
-    <!-- Joueur 2 (en bas) -->
-    <div class="joueur joueur2">
-      <div class="nom-joueur">Joueur 2</div>
-      <div class="grille">
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-      </div>
+  <!-- Joueur du haut -->
+  <div class="player">
+    <div class="title">Joueur 2</div>
+    <div class="columns">
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
     </div>
   </div>
+
+  <!-- Espace vide au milieu -->
+  <div class="spacer"></div>
+
+  <!-- Joueur du bas -->
+  <div class="player">
+    <div class="title">Joueur 1</div>
+    <div class="columns">
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+    </div>
+  </div>
+
 </body>
 </html>
 
