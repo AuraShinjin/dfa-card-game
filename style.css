@@ -65,3 +65,21 @@ button {
 .player.player-2 .slot {
   transform: rotate(180deg);
 }
+
+.corner-image {
+  position: absolute;
+  width: 120px; /* ajuste selon la taille que tu veux */
+  height: auto;
+  z-index: 10;
+  opacity: 0.9; /* léger effet de transparence si tu veux */
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
+}
