@@ -93,3 +93,10 @@ button {
   bottom: 50px;
   right: 50px;
 }
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ou "cover" si tu préfères remplir totalement */
+  border-radius: 8px;
+}
