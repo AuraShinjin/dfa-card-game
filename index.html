@@ -14,7 +14,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 275px 0; /* Marge pour éviter les bords haut/bas */
+      padding: 275px 0;
       box-sizing: border-box;
     }
 
@@ -46,14 +46,19 @@
       background-color: #444;
       border: 2px dashed #666;
       border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      color: white;
     }
 
-    /* 🎨 Ajout : coloration des 5 cases du haut du Joueur 1 */
+    /* 🎨 Coloration des cases d’attaque */
     .player:last-of-type .column .slot:first-child {
       background-color: #d68994;
     }
 
-    /* 🎨 Ajout : coloration des 5 cases du bas du Joueur 2 */
     .player:first-of-type .column .slot:last-child {
       background-color: #d68994;
     }
@@ -64,36 +69,66 @@
     }
 
     .spacer {
-      height: 80px; /* Espace entre les deux joueurs, pour éviter le centre */
+      height: 80px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Joueur du haut -->
+  <!-- Joueur 2 (en haut) -->
   <div class="player">
     <div class="title">Joueur 2</div>
     <div class="columns">
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot">ATT 5</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot">ATT 4</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot">ATT 3</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot">ATT 2</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot">ATT 1</div>
+      </div>
     </div>
   </div>
 
-  <!-- Espace vide au milieu -->
+  <!-- Espace vide -->
   <div class="spacer"></div>
 
-  <!-- Joueur du bas -->
+  <!-- Joueur 1 (en bas) -->
   <div class="player">
     <div class="title">Joueur 1</div>
     <div class="columns">
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column">
+        <div class="slot">ATT 1</div>
+        <div class="slot"></div>
+      </div>
+      <div class="column">
+        <div class="slot">ATT 2</div>
+        <div class="slot"></div>
+      </div>
+      <div class="column">
+        <div class="slot">ATT 3</div>
+        <div class="slot"></div>
+      </div>
+      <div class="column">
+        <div class="slot">ATT 4</div>
+        <div class="slot"></div>
+      </div>
+      <div class="column">
+        <div class="slot">ATT 5</div>
+        <div class="slot"></div>
+      </div>
     </div>
   </div>
 
