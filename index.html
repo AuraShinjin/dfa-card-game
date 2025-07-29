@@ -63,18 +63,22 @@
       height: 80px;
     }
 
+    /* Défense */
     .def {
       background-color: #5476cf;
     }
 
+    /* Défense provisoire */
     .def-pro {
       background-color: #4894d5;
     }
 
+    /* ATT normales */
     .att {
       background-color: #d68994;
     }
 
+    /* ATT ??? (0 et 6) */
     .att-unknown {
       background-color: #1d5355;
     }
@@ -82,18 +86,18 @@
 </head>
 <body>
 
-  <!-- Joueur 2 (en haut) -->
+  <!-- Joueur 2 -->
   <div class="player">
     <div class="title">Joueur 2</div>
     <div class="columns">
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide gauche -->
-      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div>
-      <div class="column"><div class="slot"></div><div class="slot att">ATT 5</div></div>
-      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 4</div></div>
-      <div class="column"><div class="slot def">DEF</div><div class="slot att">ATT 3</div></div>
+      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div> <!-- ATT 0 -->
+      <div class="column"><div class="slot"></div><div class="slot att">ATT 1</div></div>
       <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 2</div></div>
-      <div class="column"><div class="slot att">ATT 1</div><div class="slot att-unknown">ATT ???</div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot def">DEF</div><div class="slot att">ATT 3</div></div>
+      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 4</div></div>
+      <div class="column"><div class="slot"></div><div class="slot att">ATT 5</div></div>
+      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div> <!-- ATT 6 -->
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide droite -->
     </div>
   </div>
@@ -101,18 +105,18 @@
   <!-- Espace vide -->
   <div class="spacer"></div>
 
-  <!-- Joueur 1 (en bas) -->
+  <!-- Joueur 1 -->
   <div class="player">
     <div class="title">Joueur 1</div>
     <div class="columns">
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide gauche -->
-      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div>
+      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div> <!-- ATT 0 -->
       <div class="column"><div class="slot att">ATT 1</div><div class="slot"></div></div>
       <div class="column"><div class="slot att">ATT 2</div><div class="slot def-pro">DEF PRO</div></div>
       <div class="column"><div class="slot att">ATT 3</div><div class="slot def">DEF</div></div>
       <div class="column"><div class="slot att">ATT 4</div><div class="slot def-pro">DEF PRO</div></div>
-      <div class="column"><div class="slot att">ATT 5</div><div class="slot att-unknown">ATT ???</div></div>
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
+      <div class="column"><div class="slot att">ATT 5</div><div class="slot"></div></div>
+      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div> <!-- ATT 6 -->
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide droite -->
     </div>
   </div>
