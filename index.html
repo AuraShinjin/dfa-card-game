@@ -13,7 +13,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 40px 0;
+      padding: 80px 0;
       box-sizing: border-box;
     }
 
@@ -41,7 +41,7 @@
 
     .slot {
       width: 110px;
-      height: 140px;
+      height: 100px;
       background-color: #444;
       border: 2px dashed #666;
       border-radius: 8px;
@@ -49,7 +49,7 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px;
       color: white;
       text-align: center;
     }
@@ -57,33 +57,29 @@
     .title {
       font-weight: bold;
       font-size: 18px;
+      margin-bottom: 5px;
     }
 
-    .center {
-      display: flex;
-      gap: 15px;
-      margin: 30px 0;
+    .spacer {
+      height: 30px;
     }
 
-    /* Spécialités */
-    .def { background-color: #5476cf; }
-    .def-pro { background-color: #4894d5; }
-    .att { background-color: #d68994; }
+    /* Styles des cases spécifiques */
+    .def         { background-color: #5476cf; }
+    .def-pro     { background-color: #4894d5; }
+    .att         { background-color: #d68994; }
     .att-unknown { background-color: #1d5355; }
-    .cemetery { background-color: #afa69a; }
+    .cemetery    { background-color: #afa69a; }
     .environment { background-color: #464646; }
-
-    /* Nouvelles cases */
-    .pioche-personnage { background-color: #a02038; }
+    .pioche-personnage  { background-color: #a02038; }
     .pioche-sort-permanent { background-color: #b456f1; }
     .pioche-sort-contre { background-color: #da3bad; }
-    .pioche-invocation { background-color: #c1732e; }
-    .joueur { background-color: white; color: black; }
-
-    .monstre,
-    .pioche-monstre { background-color: #004349; }
+    .pioche-invocation  { background-color: #c1732e; }
+    .joueur            { background-color: white; color: black; }
+    .monstre           { background-color: #00dadd; }
+    .pioche-monstre    { background-color: #004349; }
     .cimetiere-evenement { background-color: #114e0c; }
-    .pioche-evenement { background-color: #4acb1e; }
+    .pioche-evenement  { background-color: #4acb1e; }
   </style>
 </head>
 <body>
@@ -92,7 +88,11 @@
   <div class="player">
     <div class="title">Joueur 2</div>
     <div class="columns">
-      <div class="column"><div class="slot"></div><div class="slot environment">ENVIRONNEMENT</div></div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot environment">ENVIRONNEMENT</div>
+        <div class="slot"></div>
+      </div>
       <div class="column">
         <div class="slot"></div>
         <div class="slot att-unknown">ATT ???</div>
@@ -106,43 +106,48 @@
       <div class="column">
         <div class="slot def-pro">DEF PRO</div>
         <div class="slot att">ATT 2</div>
+        <div class="slot cimetiere-evenement">CIMETIÈRE ÉVÈNEMENT</div>
       </div>
       <div class="column">
         <div class="slot def">DEF</div>
         <div class="slot att">ATT 3</div>
+        <div class="slot monstre">MONSTRE</div>
         <div class="slot joueur">JOUEUR</div>
       </div>
       <div class="column">
         <div class="slot def-pro">DEF PRO</div>
         <div class="slot att">ATT 4</div>
+        <div class="slot pioche-monstre">PIOCHE MONSTRE</div>
       </div>
       <div class="column">
         <div class="slot"></div>
         <div class="slot att">ATT 5</div>
-        <div class="slot pioche-sort-contre">PIOCHE SORT/CONRTE</div>
+        <div class="slot pioche-sort-contre">PIOCHE SORT/CONTRE</div>
       </div>
       <div class="column">
         <div class="slot"></div>
         <div class="slot att-unknown">ATT ???</div>
         <div class="slot pioche-sort-permanent">PIOCHE SORT PERMANENT</div>
       </div>
-      <div class="column"><div class="slot"></div><div class="slot cemetery">CIMETIÈRE</div></div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot cemetery">CIMETIÈRE</div>
+        <div class="slot"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Zone centrale -->
-  <div class="center">
-    <div class="slot pioche-evenement">PIOCHE ÉVÈNEMENT</div>
-    <div class="slot cimetière-evenement">CIMETIÈRE ÉVÈNEMENT</div>
-    <div class="slot monstre">MONSTRE</div>
-    <div class="slot pioche-monstre">PIOCHE MONSTRE</div>
-  </div>
+  <div class="spacer"></div>
 
   <!-- Joueur 1 -->
   <div class="player">
     <div class="title">Joueur 1</div>
     <div class="columns">
-      <div class="column"><div class="slot cemetery">CIMETIÈRE</div><div class="slot"></div></div>
+      <div class="column">
+        <div class="slot cemetery">CIMETIÈRE</div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
       <div class="column">
         <div class="slot att-unknown">ATT ???</div>
         <div class="slot"></div>
@@ -152,31 +157,39 @@
         <div class="slot att">ATT 1</div>
         <div class="slot"></div>
         <div class="slot pioche-invocation">PIOCHE INVOCATION</div>
+        <div class="slot pioche-evenement">PIOCHE ÉVÈNEMENT</div>
       </div>
       <div class="column">
         <div class="slot att">ATT 2</div>
         <div class="slot def-pro">DEF PRO</div>
+        <div class="slot pioche-monstre">PIOCHE MONSTRE</div>
       </div>
       <div class="column">
         <div class="slot att">ATT 3</div>
         <div class="slot def">DEF</div>
+        <div class="slot monstre">MONSTRE</div>
         <div class="slot joueur">JOUEUR</div>
       </div>
       <div class="column">
         <div class="slot att">ATT 4</div>
         <div class="slot def-pro">DEF PRO</div>
+        <div class="slot cimetiere-evenement">CIMETIÈRE ÉVÈNEMENT</div>
       </div>
       <div class="column">
         <div class="slot att">ATT 5</div>
         <div class="slot"></div>
-        <div class="slot pioche-sort-contre">PIOCHE SORT/CONRTE</div>
+        <div class="slot pioche-sort-contre">PIOCHE SORT/CONTRE</div>
       </div>
       <div class="column">
         <div class="slot att-unknown">ATT ???</div>
         <div class="slot"></div>
         <div class="slot pioche-sort-permanent">PIOCHE SORT PERMANENT</div>
       </div>
-      <div class="column"><div class="slot environment">ENVIRONNEMENT</div><div class="slot"></div></div>
+      <div class="column">
+        <div class="slot environment">ENVIRONNEMENT</div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
     </div>
   </div>
 
