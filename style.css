@@ -108,3 +108,6 @@ button {
   transform: scale(2.2);
   z-index: 1000;
 }
+
+position: relative;
+z-index: 1000;
