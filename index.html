@@ -63,14 +63,20 @@
       height: 80px;
     }
 
-    /* Cases de défense (DEF) */
     .def {
       background-color: #5476cf;
     }
 
-    /* Cases de défense provisoire (DEF PRO) */
     .def-pro {
       background-color: #4894d5;
+    }
+
+    .att {
+      background-color: #d68994;
+    }
+
+    .att-unknown {
+      background-color: #1d5355;
     }
   </style>
 </head>
@@ -81,12 +87,12 @@
     <div class="title">Joueur 2</div>
     <div class="columns">
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide gauche -->
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot"></div><div class="slot">ATT 5</div></div>
-      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot">ATT 4</div></div>
-      <div class="column"><div class="slot def">DEF</div><div class="slot">ATT 3</div></div>
-      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot">ATT 2</div></div>
-      <div class="column"><div class="slot"></div><div class="slot">ATT 1</div></div>
+      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div>
+      <div class="column"><div class="slot"></div><div class="slot att">ATT 5</div></div>
+      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 4</div></div>
+      <div class="column"><div class="slot def">DEF</div><div class="slot att">ATT 3</div></div>
+      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 2</div></div>
+      <div class="column"><div class="slot att">ATT 1</div><div class="slot att-unknown">ATT ???</div></div>
       <div class="column"><div class="slot"></div><div class="slot"></div></div>
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide droite -->
     </div>
@@ -100,12 +106,12 @@
     <div class="title">Joueur 1</div>
     <div class="columns">
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide gauche -->
-      <div class="column"><div class="slot"></div><div class="slot"></div></div>
-      <div class="column"><div class="slot">ATT 1</div><div class="slot"></div></div>
-      <div class="column"><div class="slot">ATT 2</div><div class="slot def-pro">DEF PRO</div></div>
-      <div class="column"><div class="slot">ATT 3</div><div class="slot def">DEF</div></div>
-      <div class="column"><div class="slot">ATT 4</div><div class="slot def-pro">DEF PRO</div></div>
-      <div class="column"><div class="slot">ATT 5</div><div class="slot"></div></div>
+      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div>
+      <div class="column"><div class="slot att">ATT 1</div><div class="slot"></div></div>
+      <div class="column"><div class="slot att">ATT 2</div><div class="slot def-pro">DEF PRO</div></div>
+      <div class="column"><div class="slot att">ATT 3</div><div class="slot def">DEF</div></div>
+      <div class="column"><div class="slot att">ATT 4</div><div class="slot def-pro">DEF PRO</div></div>
+      <div class="column"><div class="slot att">ATT 5</div><div class="slot att-unknown">ATT ???</div></div>
       <div class="column"><div class="slot"></div><div class="slot"></div></div>
       <div class="column"><div class="slot"></div><div class="slot"></div></div> <!-- Colonne vide droite -->
     </div>
