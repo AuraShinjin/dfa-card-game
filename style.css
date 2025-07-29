@@ -58,3 +58,10 @@ button {
 .slot.invisible {
   visibility: hidden;
 }
+
+.player.player-2 {
+  transform: rotate(180deg);
+}
+.player.player-2 .slot {
+  transform: rotate(180deg);
+}
