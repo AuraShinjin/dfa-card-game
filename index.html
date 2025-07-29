@@ -10,11 +10,10 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 275px 0;
+      padding: 40px 0;
       box-sizing: border-box;
     }
 
@@ -60,39 +59,31 @@
       font-size: 18px;
     }
 
-    .spacer {
-      height: 80px;
+    .center {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
     }
 
-    /* Défense */
-    .def {
-      background-color: #5476cf;
-    }
+    /* Spécialités */
+    .def { background-color: #5476cf; }
+    .def-pro { background-color: #4894d5; }
+    .att { background-color: #d68994; }
+    .att-unknown { background-color: #1d5355; }
+    .cemetery { background-color: #afa69a; }
+    .environment { background-color: #464646; }
 
-    /* Défense provisoire */
-    .def-pro {
-      background-color: #4894d5;
-    }
+    /* Nouvelles cases */
+    .pioche-personnage { background-color: #a02038; }
+    .pioche-sort-permanent { background-color: #b456f1; }
+    .pioche-sort-contre { background-color: #da3bad; }
+    .pioche-invocation { background-color: #c1732e; }
+    .joueur { background-color: white; color: black; }
 
-    /* ATT normales */
-    .att {
-      background-color: #d68994;
-    }
-
-    /* ATT ??? (0 et 6) */
-    .att-unknown {
-      background-color: #1d5355;
-    }
-
-    /* CIMETIERE */
-    .cemetery {
-      background-color: #afa69a;
-    }
-
-    /* ENVIRONNEMENT */
-    .environment {
-      background-color: #464646;
-    }
+    .monstre,
+    .pioche-monstre { background-color: #004349; }
+    .cimetiere-evenement { background-color: #114e0c; }
+    .pioche-evenement { background-color: #4acb1e; }
   </style>
 </head>
 <body>
@@ -101,34 +92,91 @@
   <div class="player">
     <div class="title">Joueur 2</div>
     <div class="columns">
-      <div class="column"><div class="slot"></div><div class="slot environment">ENVIRONNEMENT</div></div> <!-- ENVIRONNEMENT gauche -->
-      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div> <!-- ATT 0 -->
-      <div class="column"><div class="slot"></div><div class="slot att">ATT 1</div></div>
-      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 2</div></div>
-      <div class="column"><div class="slot def">DEF</div><div class="slot att">ATT 3</div></div>
-      <div class="column"><div class="slot def-pro">DEF PRO</div><div class="slot att">ATT 4</div></div>
-      <div class="column"><div class="slot"></div><div class="slot att">ATT 5</div></div>
-      <div class="column"><div class="slot"></div><div class="slot att-unknown">ATT ???</div></div> <!-- ATT 6 -->
-      <div class="column"><div class="slot"></div><div class="slot cemetery">CIMETIÈRE</div></div> <!-- CIMETIÈRE droite -->
+      <div class="column"><div class="slot"></div><div class="slot environment">ENVIRONNEMENT</div></div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot att-unknown">ATT ???</div>
+        <div class="slot pioche-personnage">PIOCHE PERSONNAGE</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot att">ATT 1</div>
+        <div class="slot pioche-invocation">PIOCHE INVOCATION</div>
+      </div>
+      <div class="column">
+        <div class="slot def-pro">DEF PRO</div>
+        <div class="slot att">ATT 2</div>
+      </div>
+      <div class="column">
+        <div class="slot def">DEF</div>
+        <div class="slot att">ATT 3</div>
+        <div class="slot joueur">JOUEUR</div>
+      </div>
+      <div class="column">
+        <div class="slot def-pro">DEF PRO</div>
+        <div class="slot att">ATT 4</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot att">ATT 5</div>
+        <div class="slot pioche-sort-contre">PIOCHE SORT/CONRTE</div>
+      </div>
+      <div class="column">
+        <div class="slot"></div>
+        <div class="slot att-unknown">ATT ???</div>
+        <div class="slot pioche-sort-permanent">PIOCHE SORT PERMANENT</div>
+      </div>
+      <div class="column"><div class="slot"></div><div class="slot cemetery">CIMETIÈRE</div></div>
     </div>
   </div>
 
-  <!-- Espace vide -->
-  <div class="spacer"></div>
+  <!-- Zone centrale -->
+  <div class="center">
+    <div class="slot pioche-evenement">PIOCHE ÉVÈNEMENT</div>
+    <div class="slot cimetière-evenement">CIMETIÈRE ÉVÈNEMENT</div>
+    <div class="slot monstre">MONSTRE</div>
+    <div class="slot pioche-monstre">PIOCHE MONSTRE</div>
+  </div>
 
   <!-- Joueur 1 -->
   <div class="player">
     <div class="title">Joueur 1</div>
     <div class="columns">
-      <div class="column"><div class="slot cemetery">CIMETIÈRE</div><div class="slot"></div></div> <!-- CIMETIÈRE gauche -->
-      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div> <!-- ATT 0 -->
-      <div class="column"><div class="slot att">ATT 1</div><div class="slot"></div></div>
-      <div class="column"><div class="slot att">ATT 2</div><div class="slot def-pro">DEF PRO</div></div>
-      <div class="column"><div class="slot att">ATT 3</div><div class="slot def">DEF</div></div>
-      <div class="column"><div class="slot att">ATT 4</div><div class="slot def-pro">DEF PRO</div></div>
-      <div class="column"><div class="slot att">ATT 5</div><div class="slot"></div></div>
-      <div class="column"><div class="slot att-unknown">ATT ???</div><div class="slot"></div></div> <!-- ATT 6 -->
-      <div class="column"><div class="slot environment">ENVIRONNEMENT</div><div class="slot"></div></div> <!-- ENVIRONNEMENT droite -->
+      <div class="column"><div class="slot cemetery">CIMETIÈRE</div><div class="slot"></div></div>
+      <div class="column">
+        <div class="slot att-unknown">ATT ???</div>
+        <div class="slot"></div>
+        <div class="slot pioche-personnage">PIOCHE PERSONNAGE</div>
+      </div>
+      <div class="column">
+        <div class="slot att">ATT 1</div>
+        <div class="slot"></div>
+        <div class="slot pioche-invocation">PIOCHE INVOCATION</div>
+      </div>
+      <div class="column">
+        <div class="slot att">ATT 2</div>
+        <div class="slot def-pro">DEF PRO</div>
+      </div>
+      <div class="column">
+        <div class="slot att">ATT 3</div>
+        <div class="slot def">DEF</div>
+        <div class="slot joueur">JOUEUR</div>
+      </div>
+      <div class="column">
+        <div class="slot att">ATT 4</div>
+        <div class="slot def-pro">DEF PRO</div>
+      </div>
+      <div class="column">
+        <div class="slot att">ATT 5</div>
+        <div class="slot"></div>
+        <div class="slot pioche-sort-contre">PIOCHE SORT/CONRTE</div>
+      </div>
+      <div class="column">
+        <div class="slot att-unknown">ATT ???</div>
+        <div class="slot"></div>
+        <div class="slot pioche-sort-permanent">PIOCHE SORT PERMANENT</div>
+      </div>
+      <div class="column"><div class="slot environment">ENVIRONNEMENT</div><div class="slot"></div></div>
     </div>
   </div>
 
