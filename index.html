@@ -5,18 +5,36 @@
   <title>Plateau DFA Card</title>
   <style>
     body {
-  background: url('keep/PLATEAU TEST.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 160px 0;
-  box-sizing: border-box;
-  overflow: hidden;
+      background: url('keep/PLATEAU TEST.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 160px 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .corner-image {
+      position: absolute;
+      width: 150px;
+      height: auto;
+      z-index: 5;
+    }
+
+    .top-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .top-right {
+      top: 10px;
+      right: 10px;
     }
 
     .player {
@@ -101,6 +119,10 @@
   </style>
 </head>
 <body>
+
+  <!-- Images décoratives -->
+  <img src="keep/DEN COUP 1.jpg" alt="Den Coup 1" class="corner-image top-left">
+  <img src="keep/DEN COUP 2.jpg" alt="Den Coup 2" class="corner-image top-right">
 
   <!-- Joueur 2 -->
   <div class="player player-2">
