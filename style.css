@@ -100,3 +100,10 @@ button {
   object-fit: contain; /* ou "cover" si tu préfères remplir totalement */
   border-radius: 8px;
 }
+
+.card:hover {
+  transform: scale(2.5);
+  z-index: 999;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
