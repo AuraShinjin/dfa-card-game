@@ -94,20 +94,4 @@ button {
   right: 50px;
 }
 
-<div class="card">
-  <img src="imagescard/Cat.jpg" alt="Cat" style="width:100%; height:100%; object-fit:cover;" />
-</div>
-.card {
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-  z-index: 10;
-}
 
-.card:hover {
-  transform: scale(2.2);
-  z-index: 1000;
-}
-
-position: relative;
-z-index: 1000;
