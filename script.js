@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const piocheCartes = [
     "imagescard/CAT.jpg",
     "imagescard/LOMBRICOR.jpg"
-    ];
+  ];
 
   // Mélange aléatoire
   function melanger(array) {
@@ -16,23 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   melanger(piocheCartes);
 
-  // Création du bouton de pioche
-  const boutonPioche = document.createElement("button");
-  boutonPioche.textContent = "Piocher";
-  boutonPioche.style.position = "absolute";
-  boutonPioche.style.bottom = "320px";
-  boutonPioche.style.left = "180px";
-  boutonPioche.style.zIndex = "10";
-  boutonPioche.style.padding = "10px 20px";
-  boutonPioche.style.backgroundColor = "#a02038";
-  boutonPioche.style.border = "none";
-  boutonPioche.style.borderRadius = "8px";
-  boutonPioche.style.color = "white";
-  boutonPioche.style.cursor = "pointer";
+  // Trouve la case "PIOCHE PERSONNAGE" (elle doit avoir cet ID dans le HTML)
+  const casePioche = document.getElementById("pioche-personnage");
 
-  document.body.appendChild(boutonPioche);
-
-  // La main du joueur 1 est en bas à gauche (près de l'image "MAIN JOUEUR1")
+  // Création de la main du joueur
   const mainJoueur = document.createElement("div");
   mainJoueur.style.position = "absolute";
   mainJoueur.style.bottom = "100px";
@@ -43,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(mainJoueur);
 
   // Action de pioche
-  boutonPioche.addEventListener("click", () => {
+  casePioche.addEventListener("click", () => {
     if (piocheCartes.length === 0) {
       alert("La pioche est vide !");
       return;
@@ -57,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carte.style.cursor = "grab";
     carte.draggable = true;
 
-    // Permet de déplacer la carte librement
+    // Drag libre
     carte.addEventListener("mousedown", function (e) {
       carte.style.position = "absolute";
       carte.style.zIndex = 1000;
