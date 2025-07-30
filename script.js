@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   // Liste des cartes de la pioche (à personnaliser)
   const piocheCartes = [
@@ -76,4 +75,3 @@ document.addEventListener("DOMContentLoaded", function () {
     mainJoueur.appendChild(carte);
   });
 });
-</script>
