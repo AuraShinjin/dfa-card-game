@@ -2,10 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Liste des cartes de la pioche (à personnaliser)
   const piocheCartes = [
-    "keep/Cat.jpg",
-    "keep/Cat2.jpg",
-    "keep/Cat3.jpg"
-  ];
+    "imagescard/CAT.jpg",
+    "imagescard/LOMBRICOR.jpg"
+    ];
 
   // Mélange aléatoire
   function melanger(array) {
